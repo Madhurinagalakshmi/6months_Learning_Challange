@@ -1,0 +1,51 @@
+whenever we are importing a file it will import all its vriables,methods along with print statemnets
+ if u want only that specific variable or method u can do so
+If a python file has different methods we can import it 
+1. using import file_name
+and usage =>  temp = file_name.method_name()
+
+other way
+2. from file_name import method_name()
+usage => temp = method_name()
+
+3. we can import 
+from file_name import *
+This imports all names except those beginning with an underscore (_).
+
+Also we can use Aliases
+import file_name as file
+
+also
+from file_name import method_name as method
+
+***** important
+for efficiency resons every file is loaded only once when it is imported , so if u make any changes in the imported files , u must restart the interpreater to import the updated file,, but if u have only 1 file to reload u can use 
+importlib.reload
+i.e;
+ import importlib
+ importlib.reload(module_name)
+
+ __name__ value depends on its usage
+if that file is run directly then __name__ = "__main__"
+if that file is imported into other file then value of __name__ = file_name
+
+This is to control the executing of file
+
+generally, when we import a file it will be auto executed (run) before we call it 
+to control this we use this line __name__ = "__main__"
+if we put thos line in parent file , it will not be auto executed , it will be executed only when it is called in the child file but not when it is imported
+
+
+
+
+#6.4
+
+from directory import *
+doing this may import unnecessary files
+local variables can shadow/overwrite importing files(modules) which will cause errors 
+we can define __all__ = [] list of ubmodules needed to import when we use this line from directory import *
+if __all__ is not defined does not import all submodules from package
+
+
+standard librries
+math,counter,calnedar,datetime,random,os

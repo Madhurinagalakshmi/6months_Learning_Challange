@@ -1,0 +1,36 @@
+File-Objects
+read only
+f = open('filename.txt','r')
+read and write --> r+
+append(Adds text to the end of the filr automatically) -> 'a'
+write ---> w (if that file does ot exist it wll create a new file , if exists it will overwrite the file)
+f.name --> gives name of file
+f.mode --> gives in what mode it is opened (eg.: r, r+....)
+f.close() --> closes the file
+with open('filename.txt','r') as f:    --> context manager : automatically closes file and clean up --> best practice
+     pass  (we have to write everything here)
+     for line in f:
+         print(line,end=" ")
+     f_cont = f.read()
+              f.readlines()
+              f.readline()  --> every time we run prints the next line
+              f.read(100) readss 100 characters
+              f.read(100) now this we take up next 10 chars and print them 
+              f.seek(0) if we put it , it will not start from next char but will take up from 1st char  
+f.closed --> tells if it os closed on not
+withopen('filename.txt','w') as f:
+   f.write('content u wnat to write')
+   f.seek(0)  -> pointer goes to index 0
+   f.write('g')
+we can use two files at a time using nested statements
+
+Try - Except:
+
+try:
+   file = open('filename.txt','r')
+except Exception as e:
+   print('error',e)
+else: --> if try block does not raise an exception
+  pass
+finally:
+  pass

@@ -1,0 +1,40 @@
+Class Variables-- class's properties not objects's , accessed using classname className.Variables
+instance Variables--- these variables are belongs to obkect , if we modigy for each object it will not be changed for other object, can be accessed using self.varname
+refer to classExample file to see the code
+__str__ method in python is a dunder or magic method which tells python to how it should be printed ---> this method should always return a string
+
+if u create an object to a class and when u print that object it will show objects location that is not human_readable so if u want your custom thing u wnat to show u can put in the __str__ method
+ __dir__ --> returns all instance variables and their values as key value pairs
+
+isinstance(obj,parent) --> to check if obj belongs to any child class of parent
+
+multiple inheritance
+class A:
+    def __init__(self):
+        print("A init")
+
+class B(A):
+    def __init__(self):
+        super().__init__()
+        print("B init")
+
+class C(B):
+    def __init__(self):
+        super().__init__()
+        print("C init")
+
+obj = C()
+
+
+constructer inheritance
+class Parent:
+    def __init__(self, name):
+        self.name = name
+
+class Child(Parent):
+    def __init__(self, name, age):
+        super().__init__(name)   # call Parent constructor
+        self.age = age
+
+c = Child("Lakshmi", 21)
+print(c.name, c.age)

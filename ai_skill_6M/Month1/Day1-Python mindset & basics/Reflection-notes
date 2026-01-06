@@ -1,0 +1,30 @@
+Today i have read python documentation
+In that things got my focus are:
+1. '\' escape character
+we use this if we want to have single or double codes inside a string
+eg: "this is madhuri\"s bag"
+But istead this we can use alternate codes i.e "this is madhuri's bag" or 'this is madhuri"s bag', if we do this no need to put escape charater
+
+2. \n - next line
+but if you want '\n' in your string we can use r'string\nfndh'
+
+3. multiple lines strings
+
+""" or '''
+
+4. if you want to break long strings
+
+text = ('Put several strings within parentheses '
+        'to have them joined together.')
+
+output:
+Put several strings within parentheses to have them joined together.
+
+
+list methods::
+we can add 2 lists using list1 + list2
+append a new element into the list usin append => list1.append(2)
+correct_rgba = rgba[:] => creates shallow copy of the rgba
+
+and...... 
+Since ** has higher precedence than -, -3**2 will be interpreted as -(3**2) and thus result in -9. To avoid this and get 9, you can use (-3)**2.
