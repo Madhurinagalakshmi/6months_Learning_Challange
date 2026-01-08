@@ -32,7 +32,7 @@ i.e for a particular innput  --  expected output
 edge cases in marks analyzer file:
 
 1. if nums is not dictionary
-2. if it contains largest value of integer -- cause of overflow
+2. if it contains largest value of integer -- Very large values may impact performance or memory, not overflow.”
 3. if maximum marks isn greater than integer limit 
 4. if minimum marks in smaller than integer limit 
 5. marks are negative

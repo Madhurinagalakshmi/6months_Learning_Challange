@@ -1,0 +1,58 @@
+What is Aiml pipeline?
+data retrieval -> data preprocessing -> splitting datasets -> experiments -> running tests(hyperparameter adjustment -> training -> evaluation -> tracking the metric)->  deployment
+
+evaluation :
+regression models: -> loss metrics 
+classification models -> accuracy, precision,recall,f-scores
+
+Data import ->data cleaning -> eda/feature engineering -> model training -> predict and deployment
+
+“Common data pipeline failures machine learning"??
+1. data drift -->un updated data
+2. null or missing data
+3. data leakage
+4. schema changes
+5. biased or unbalanced data
+6. wrong values
+
+How to explain system design in interviews simple?
+System design is about deciding how different parts of a system work together to solve a large problem efficiently and reliably.
+step 1: clarify requirements
+functional:
+login, search, upload, message
+non-functional:
+scalability,latency,availability,security
+step 2: high-level components
+step3: explajn the data flow
+step4: database choice (why this?)
+step5 : scaling staetegy
+step6: any limitations
+
+pipeline of marks project:
+
+data retrieval ==> file is imported and opened ==> data is processed line by line in marks reader class ==> that will be loaded into analyzer class to analyze the marks and return results to main file 
+
+task 2:
+for the pipeline failures may cause at file uploading stage if the file format is not valid and file path is not valid,and data is not cleaned (missing or non uniform data types).If code logic fails.
+How would you detect it?
+we can detct them by testing input data .
+can also perform testing on code (unit testing,manual testing etc...)
+running some manual tests and testing the code
+
+What should the system do?
+when a file path is given, it should take data from the file and give to marks analyzer, to analyze and give analysis , this will print results.
+
+If data size becomes 100×, what breaks first?
+marks reader breaks., it becomes slow
+
+If this runs daily automatically, what new problems appear?
+it may cause someproblems if input is not proper
+
+Explain your project end-to-end.”
+data retrieval ==> file is imported and opened ==> data is processed line by line in marks reader class ==> that will be loaded into analyzer class to analyze the marks and return results to main file 
+“Where would you add logging?”
+
+“How would you test this pipeline?”
+i would wite tests in each function separately to test the unit and them i would combine and test the flow later i will give some manual test cases and test the code
+“What part would you refactor first?”
+the marks reader code will be first thing ti refactor and then maks reader.
