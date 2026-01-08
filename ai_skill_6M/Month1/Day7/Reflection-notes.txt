@@ -1,0 +1,64 @@
+Why testing is important in software engineering?
+Testing is important because software failures directly impact reliability, cost, and user trust. Testing helps catch assumptions early.
+it is important because if a softeare testing is not  performed properly, it can cause huge loss including finces of a nation, can crash a plane....
+it has become a part of software development cycle
+life cycle software testing life cycle 
+1. unit testing - developer
+integration testing
+system testing - functional and non functional
+acceptance testing
+
+what are edge cases?
+edge cases: problem occuring at extreme cases
+corner cases: problem occurs when more than 1 extreme cases happen at once
+
+Python unit testing basics...
+unit testing  -  checking each method separately to know if it works as expected
+i.e for a particular innput  --  expected output
+
+5 edge cases of marksReader
+
+1. if file misses
+2. if the file is in another directory
+3. empty file
+4. if format of data is different in each line
+5. comma is not present
+6  type of data is not as expected
+7. invalid data
+8. if the name is too long so that 1 name and marks pair exceeds 1 line
+9. if name contains commas
+10. what if marks are written in the form of words
+
+edge cases in marks analyzer file:
+
+1. if nums is not dictionary
+2. if it contains largest value of integer -- cause of overflow
+3. if maximum marks isn greater than integer limit 
+4. if minimum marks in smaller than integer limit 
+5. marks are negative
+6. if length of nums is 0
+7. if type of elements in nums is not as expected
+8. hardcoding maximum and minimum values would crash the system
+
+Manual testing :
+3 edge cases
+
+1.
+numbers.txt
+'bjgftfyhkuhouhoujikihjfytgukjlknjfutgiujoklihgbkj......(long name exceeded one line )'
+,89
+'madhuri,maddukuri',68
+'madhuri','sixty
+
+
+for these test cases my code wont work as expected
+
+
+bug reflection:
+if the file is from same root folder but in different sub folder with the class using it, it caused a file not found error  thios os the bug confused me the most
+
+please tell me how to solve it
+
+
+
+

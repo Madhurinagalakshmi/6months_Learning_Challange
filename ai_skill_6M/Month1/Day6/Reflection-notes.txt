@@ -1,0 +1,62 @@
+Refactoring tips:
+1. merge nested if statements(using 'and')
+2. use 'any' instead of a loop 
+for n in numbers:
+  if n>0:
+    has_pos = True
+    break
+
+    instead of this
+has_pos = any(n>0)for n in numbers 
+3. pull statements out of for/while loops
+4. remove inline variables that are used only once
+5. replace if statements with if expressions
+    instead of if and else u can use something like this
+    x = 1 if condition else 2
+6. add a gaurd clause
+   if there is alot of code there in one condition and in else case very simple code then switch the condition try to put shortest code part in forst condition
+in vscode sourcery.ai extension
+
+7. bignumbers can be separated using underscores: 100_00_000_00
+8. enumerate -- returns index and element in lists
+for index,name in enumerate(names) : 
+  print(index,name)
+for index,name in enumerate(names,start = 1): 
+  print(index,name)
+
+  start --  helps us to index our number form desired digit
+
+u can use two lists at a time
+capitals = ['A','B','C','D','E']
+smalls = ['a','b','c','d','e']
+for index,letter in enumerate(capitals):
+  s = smalls[index]
+  print(f'{s} is actually {letter}')
+9. instead of 
+a= 1
+b = 
+we can use 
+(a,b) = (1,2)
+10 for dictionaries:
+  to iterate through the dictionaries:
+  for key,value in freq.items():
+  print(key,value)
+
+Which file changes if input format changes?
+marks_reader changes.
+Which file changes if new analysis is added?
+marks_analyzer
+Which file should almost never change?
+main
+Is any file doing more than one job?
+yes marks_analyzer is doing multiple tasks like finding average, highest,lowest,counting...
+
+If data comes from API instead of file, what changes?
+API is used so that it will be supported by all softwares, files will not be compatible for all softwares
+If we add UI/web app, what stays the same?
+backend working logic stays same
+If dataset becomes 10× bigger, what might break?
+scalability, system 
+
+“Explain your project design like I’m a non-technical manager.”
+on day5 i have created a project to analyze marks and give analysis, in main file we will create instance to read marks from the file and those marks will be given to marks_analyzer class and give analyzis of the marks
