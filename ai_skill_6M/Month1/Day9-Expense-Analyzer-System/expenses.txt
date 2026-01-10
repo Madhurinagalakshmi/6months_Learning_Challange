@@ -1,0 +1,10 @@
+travel,3000
+food,200
+ntng
+
+bus-fee,100
+200,groc
+
+47
+seventy,enjoy
+groceries , 300

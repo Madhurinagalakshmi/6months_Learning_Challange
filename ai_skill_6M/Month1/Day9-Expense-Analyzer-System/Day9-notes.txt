@@ -1,0 +1,43 @@
+What is  an expense record?
+An expense record contains an information about a particular expense .It contains expense name and its price(how  much amount is spent on it) . ed: Food,250
+
+What the system needs to do?
+System needs to read the expenses records and collect valid data and anlayze the data to give insights.
+
+what is input ?
+Expense name and its price(how  much amount is spent on it) .
+
+what is output?
+collect valid data and anlayze the data to give insights like highest , lowest, average expense.
+
+what can go wrong?
+if file is missing.
+if the file has invalid data
+data is in invalid form
+empty file
+each record is in different format
+if the money is not in same currency for example in rupees , in dollars.
+
+reader - expense_reader.py
+analyzer - expense_analyzer.py
+main - main.py
+
+edge-cases of reader:
+file is missing
+empty lines
+currency info is different in each records
+no expenses
+
+for analyzer:
+neagtive values
+very large values
+
+i felt confused?
+area where i felt little uncomfort last time is during writing analyzzer class how to take that data collected from reader class to analyzer class.
+i felt i can overcome this by practicing or creating more projects. If possible please give me some best suggestions.
+
+in this project , i  feel how currency info i different in each records.
+wht decision was hardest?
+how to handle wrong format data.
+
+no i can  not copy marks project directly, i have to write different logics for marks reader especially. though ome of the main tasks like opening file are simliar , can not copy marks project blindly
