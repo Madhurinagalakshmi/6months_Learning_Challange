@@ -1,0 +1,8 @@
+What change improved robustness the most?
+i have updated variable names , which makes the code more readble.I have also updated the code to catch only expecting exceptions, so that it helps me to know different possible expections . 
+Which bug would have been hardest to catch in production?
+import error
+What assumption did you remove today?
+I assumed every valid record has exactly two comma-separated fields
+What still feels fragile?
+i am taking data from file i felt this os fragile, instead of this if data comes from api it would be strong

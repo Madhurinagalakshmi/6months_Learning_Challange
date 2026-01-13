@@ -1,0 +1,43 @@
+What parts of your system will change most often?
+Data input part in expenseReader class.
+if we take file , data collection logic is different ,and it is different when we take input from api.
+What parts should almost never change?
+core part of analyzer will never change , because we are giving clean data to the analyzer and it is returning required results. Once we colect results its our wish to print in ui or store in a file...etc.
+What assumptions would break first if requirements change?
+Assuming data comes from file, 
+Assuming data format i.e, i assumed data has 1 expense per category , i.e only one record for food, 1 record for travel..etc
+
+Category-wise total spending
+OR
+
+Count of expenses per category
+
+to implement this my code breaks,since i am storing data in map , assuming data has 1 expense per category , i.e only one record for food, 1 record for travel..etc., if it has multiple records it will overwrite in map. To implement that i need to store list per each key in map i.e eah cateogry.
+
+
+If expenses come from an API instead of file:
+
+Which file changes?
+
+Which files remain unchanged?
+
+What new component would you add?
+
+to answer this firstly i dont know how to work with APIs , but i can say that marks_reader file changes, analyzer file does not change, 
+
+Avoid hard-coded file names in main
+instead give the file name to a variable and use that variable where ever u want
+Pass configuration instead of constants
+# main.py
+config = {
+    "max_amount": 100000
+}
+
+reader = ExpenseReader(filename, config)
+# expense_reader.py
+def __init__(self, filename, config):
+    self.filename = filename
+    self.max_amount = config["max_amount"]
+If a value may change → it is configuration, not logic.
+Make analyzer methods independent of internal storage
+

@@ -1,7 +1,9 @@
 import expense_reader as er
 import expense_analyzer as ea
+import os
 
-reader_obj = er.ExpenseReader('expenses.txt')
+filename = 'expenses.txt'
+reader_obj = er.ExpenseReader(filename)
 data = reader_obj.read_file()
 print(data)
 analyzer_obj = ea.ExpenseAnalayzer(data)
@@ -13,4 +15,3 @@ average = analyzer_obj.find_average()
 print(highest)
 print(lowest)
 print(total)
-print(average)

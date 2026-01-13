@@ -1,0 +1,30 @@
+Q.Which logic appears more than once?
+ 1. checking if the input is empty.
+ 2. looping through values
+ 3. finding sum
+
+Which parts could be reused in another project?
+  file importing and reading part
+  logic of anlayzer
+  connection between the files through main
+Which parts are specific only to expenses?
+  cateogory, input format
+
+Generalize ONE Analyzer Pattern:
+we can separate prices into separate array and work on it.
+
+What part could be reused for any file-based reader?
+parsing thhrough each line and collecting data
+What part is expense-specific?
+choosing the data structure would be expense specifc .
+
+What duplication did you notice only now?
+ 1. checking if the input is empty.
+ 2. looping through values
+ 3. finding sum
+What logic surprised you by being reusable?
+looping through values
+What did you decide not to abstract? Why?
+“I did not abstract expense categories because they are domain-specific and abstraction would make the code harder to understand without real reuse benefit.
+How would this help your next project?
+i would use the structure for future projects but not the code and logic because they depend on the purpose of the project.

@@ -10,8 +10,6 @@ class ExpenseAnalayzer:
         for key in self.expenses.keys():
             total += self.expenses[key]
         return total
-
-
     def find_average(self):
         if(len(self.expenses)==0):
             return 0
@@ -41,5 +39,7 @@ class ExpenseAnalayzer:
             k,v = first_pair
             mini = v
             for key in self.expenses.keys():
-                maxi = min(mini,self.expenses[key])
+                mini = min(mini,self.expenses[key])
             return mini
+        
+    
